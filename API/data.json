@@ -1,0 +1,14 @@
+{
+  "customers": [
+    {
+      "name": "ABC Enterprises",
+      "address": "1432 Fourth St. Lake Orion, Michigan 48359",
+      "id": 3
+    },
+    {
+      "name": "XYZ Corp",
+      "address": "531 Center Circle St. West Chester New York 431122",
+      "id": 4
+    }
+  ]
+}

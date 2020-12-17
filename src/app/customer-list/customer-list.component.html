@@ -1,0 +1,28 @@
+<div class="container"> <label>Search</label> <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm"><br>
+  <h3>List All Customers Shipments</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        
+        <th scope="col">Customer Name</th>
+      
+        <th scope="col">Address</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of customersData | filter:filterTerm">
+        
+        <td>{{item.name}}</td>
+    
+        <td>{{item.address}}</td>
+        <td style="display: flex">
+            <button type="button" class="btn btn-warning btn-sm" routerLink="/edit/{{item.id}}">Edit</button>
+            <button type="button" class="btn btn-danger btn-sm ml-1" (click)="delete(item)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button type="button" class="btn btn-success" routerLink="/create">Add New Customer</button>
+</div>
